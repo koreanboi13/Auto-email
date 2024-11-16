@@ -8,21 +8,6 @@ import sys
 import os
 from pathlib import Path
 
-
-
-def clear_folder():
-    with open("path.txt", 'r') as f:
-        folder_path = f.readline().strip()
-
-    for filename in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, filename)
-        try:
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-                print(f"Удалён файл: {file_path}")
-        except Exception as e:
-            print(f"Ошибка при удалении {file_path}: {e}")
-
 def prepare_args(list_of_beats):
     with open("path.txt", 'r') as f:
         folder_path = f.readline().strip()
@@ -79,10 +64,11 @@ argv = sys.argv[1]
 
 bcc_recipients = []
 
+
 if argv == "1":
     status_search = "ждет"
     
-    with open("text_first.txt", 'r') as f:
+    with open("text_single.txt", 'r') as f:
         subject = f.readline()
         body = f.read()
 
@@ -115,8 +101,7 @@ elif argv == "2":
         i += 1
 
 if bcc_recipients:
-    send_email_bcc(bcc_recipients, sender_email, sender_password, body)
+    send_email_bcc(bcc_recipients, sender_email, sender_password, subject,body)
 
 wb_obj.save("artists.xlsx")
 
-clear_folder()
