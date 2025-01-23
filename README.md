@@ -1,4 +1,3 @@
-```markdown
 # Проект: Отправка битов артистам через Telegram и email
 
 ## Описание
@@ -35,7 +34,6 @@
 1. Склонируйте репозиторий:
    ```bash
    git clone https://github.com/your-repo/project-name.git
-   ```
 2. Установите необходимые зависимости:
    ```bash
    pip install -r requirements.txt
