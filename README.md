@@ -33,12 +33,8 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/your-repo/project-name.git
-2. Установите необходимые зависимости:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Создайте и настройте следующие файлы:
+   git clone https://github.com/koreanboi13/Auto-email.git
+2. Создайте и настройте следующие файлы:
    - **`sender.txt`** - Укажите email и пароль отправителя:
      ```
      your_email@gmail.com
@@ -51,12 +47,12 @@
    - **`text_single.txt`** и **`text_multiple.txt`** - Укажите заголовок и текст письма.
    - **`token.txt`** - Укажите токен вашего Telegram-бота.
 
-4. Создайте папку для хранения битов:
+3. Создайте папку для хранения битов:
    ```bash
    mkdir beats
    ```
 
-5. Убедитесь, что в папке находится файл `artists.xlsx` с данными артистов.
+4. Убедитесь, что в папке находится файл `artists.xlsx` с данными артистов.
 
 ## Использование
 
